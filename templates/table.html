@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block data %}
+<div class="table">
+    <table>
+        <thead>
+            <tr>
+                <th>S.No</th>
+                <th>Recipe Name</th>
+                <th>Recipe Description</th>
+                <th>Recipe Image</th>
+                <th>Tasks</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for data in queryset %}
+            <tr>
+                <td>{{forloop.counter}}</td>
+                <td>{{data.recipe_name}}</td>
+                <td>{{data.recipe_desc}}</td>
+                <td>{% if data.recipe_image %}<img  src='{{data.recipe_image.url}}' alt="No Images">{% else %}No Data {%endif%}</td>
+                <td><a href="/edit_recipe/{{data.id}}"><button id="Button"><i class="fa fa-edit"></i></button></a>
+                <a href="/delete_recipe/{{data.id}}"><button id="Button-2"></button> </a>
+                
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock data %}

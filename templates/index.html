@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block data %}
+    <div id="Div">
+        <form action="" method="post" enctype="multipart/form-data">
+            
+            {% csrf_token %}
+            
+            <div>
+                <h1>Add Recipes</h1>
+            </div>
+
+            <hr>
+
+            <div>
+                <input placeholder="Recipe Name" type="text" name="recipe_name">
+            </div>
+
+            <div>
+                <input placeholder="Recipe Description" type="text" name="recipe_desc">
+            </div>
+
+            <div>
+                <input id="upload" placeholder="Recipe Image" type="file" name="recipe_image">
+            </div>
+
+            <button type="submit">Add</button>
+        </form>
+    </div>
+{% endblock data %}
+   
+
+

@@ -1,0 +1,148 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+
+
+body{
+    font-family: 'Archivo Black', sans-serif;
+    background-color: rgb(255, 255, 255);
+    width: auto;
+    box-sizing: border-box;
+}
+
+#Div{
+    background-color: rgb(255, 255, 255);
+    width: 50%;
+    margin: 5vh auto 15vh auto;
+    display: flex;
+    justify-content: center;
+    padding: 2vw;
+    box-shadow:  0 0 30px rgba(159, 159, 159, 0.711);
+    border-radius:2rem;
+    font-size: 2rem;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+#Div div{
+    display: flex;
+    justify-content: center;
+}
+
+
+input{
+    color : rgb(0, 0, 0);
+    width: 35vw;
+    margin : 1.1rem;
+    padding: 1vw;   
+    border-radius: 2vw;
+    text-align: center;
+    border: 1px solid black;
+    font-size: x-large;
+    background: rgb(255, 255, 255);
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+input::placeholder{
+    color: rgb(0, 0, 0);
+}
+input:hover::placeholder{
+    color: rgb(255, 255, 255);
+    scale: 1.2  ;
+}
+
+input:hover{
+    background: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    scale: 1.1;
+}
+
+input:active{
+    background: #0000006c;
+    scale: 1;
+}
+#upload{
+    color: rgb(0, 0, 0);
+    justify-content: center;
+    border-radius: 20vw;
+    background-color: rgb(255, 255, 255);
+    font-size: x-large;
+    word-spacing: 0px;
+    width:25vw;
+    height: auto;
+    /* padding: 15px 0 15px 15px; */
+    padding:0.7vw;
+    margin: 1.1rem 0 3vh ;
+    transition: all 0.3s;
+}
+
+
+#upload:hover{
+    background: #000;
+    color: white;
+    scale: 1.1;
+}
+
+#upload:active{
+    background: #0000006c;
+    scale: 1;
+}
+
+::file-selector-button{
+    color: rgb(255, 255, 255);
+    padding: 0.8em;
+    width: auto;
+    height: auto;
+    border-radius: 10px;
+    border: 1px solid white;
+    font-size: small;
+    transition: all 0.3s;
+    background-color: black;
+    margin:0 2vw 0 1vw ;
+}
+
+::file-selector-button:hover{
+    scale: 1.2;
+    background-color: #fff;
+    color: #000;
+    border: 2px solid green;
+}
+hr{
+    border: 2px solid black;
+    width: 100%
+}
+
+
+button{
+    background-color: transparent;
+    font-size: x-large;
+    padding: 2% 4%;
+    border-radius: 15px;
+    align-self: center;
+
+    transition: all 0.3s;
+}
+
+button:hover{
+    background: black;
+    color:  white;
+    scale: 1.2;
+}
+
+button:active{
+    background: #0000008c;
+    scale: 1;
+}
+
+h1{
+    margin: 2vh;
+    transition: all 0.3s;
+
+}
+
+h1:hover{
+    scale: 1.3;
+}

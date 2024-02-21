@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+
+
+body{
+    font-family: 'Archivo Black', sans-serif;
+    background-color: rgb(255, 255, 255);
+    width: auto;
+    box-sizing: border-box;
+}
+
+.table{
+    display: flex;
+    justify-content: center;
+    margin: 6vh auto 2vh auto;
+    width: 75%;
+    height: 80vh;
+    padding: 2vw;
+    border: 1px solid grey;
+    border-radius: 2vw;
+    overflow: auto;
+
+}
+
+.table::-webkit-scrollbar{
+    background-color:  transparent;
+    width: 10px;
+    padding: 20px;
+    margin-block-start: 20px;
+    transform: translateX(-100px);
+}
+
+
+.table::-webkit-scrollbar-button{
+    display: none;
+    margin-block: 20px;
+}
+
+.table::-webkit-scrollbar-track{
+    background-color: transparent;
+    border:  1px solid rgba(255, 255, 255, 0.371);
+    border-radius: 2vw;;
+}
+
+.table::-webkit-scrollbar-track-piece:end{
+    background: transparent;
+    margin-bottom: 30px;
+}
+.table::-webkit-scrollbar-track-piece:start{
+    background: transparent;
+    margin-top: 30px;
+}
+
+
+.table::-webkit-scrollbar-thumb{
+    background-color: rgba(0, 0, 0, 0.649);
+    border-radius: 20vw;
+}
+
+table{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    border-radius: 2vw;
+    padding: 2vw;
+    font-size: large;
+    flex-direction: column;
+}
+
+table thead tr{
+    display: flex;
+    background-color: rgb(0, 132, 152) !important;
+    color: white;
+    text-shadow: 0 0 10px black;
+    width: 67.8vw;
+    height: 2%;
+    /* margin-bottom: 10px; */
+    justify-content:space-between;
+    padding: 1%;
+    position: fixed;
+    top: 4.1vw;
+    left: auto;
+    right: auto;
+    transform: translateX(2 px);
+
+} 
+
+table thead tr::before{
+    content: '';
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    width: 103%;
+    height:34.5%;
+    transform: translate(-2vw, -31px);
+}
+
+
+
+th:not(:nth-child(1)){
+    margin-right: 4.5vw;
+}
+
+table tbody tr{
+    display: flex;
+    width: 69.5vw;
+    margin: auto;
+    justify-content:center;
+    border: 2px solid rgb(0, 0, 0); 
+}
+
+table tbody tr:last-child{
+    margin-bottom: 1vw;
+}
+
+td{
+    transition: all 0.3s;
+    border: 1px solid rgb(0, 0, 0);
+
+}
+
+td:nth-child(1){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid rgb(0, 0, 0); */
+    width: 15%;
+    padding: 1vw;
+    text-align: center;
+
+}
+
+td:nth-child(2){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid rgb(0, 0, 0); */
+    width: 100%;
+    padding: 1vw;
+    text-align: center;
+}
+
+td:nth-child(3){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid rgb(0, 0, 0); */
+    width: 100%;
+    padding: 1vw;
+    text-align: center;
+}
+
+td:nth-child(4){
+    margin: auto;
+    width: 100%;
+    padding: 1.2vw;
+    /* border: 1px solid rgb(0, 0, 0); */
+
+    text-align: center;
+}
+td:nth-child(5){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid rgb(0, 0, 0); */
+    width: 100%;
+    padding: 0.5vw;
+    text-align: center;
+}
+
+td:nth-child(1):hover{
+    background-color: #000000bb;
+    color: white;
+}
+td:nth-child(2):hover{
+    background-color: #000000bb;
+    color: white;
+}
+td:nth-child(3):hover{
+    background-color: #000000bb;
+    color: white;
+}
+td:nth-child(1):active{
+    scale:  1.4;
+    border-radius: 1vw;
+    font-size: 1.3vw;
+
+}
+td:nth-child(2):active{
+    font-size: 1.3vw;
+    scale:  1.4;
+    border-radius: 1vw;
+}
+td:nth-child(3):active{
+    scale:  1.4;
+    border-radius: 1vw;
+    font-size: 1.3vw;
+
+    
+}
+
+img{
+    width: 100%;
+    border-radius: 1vw;
+    height: auto;
+    transition: all 300ms;
+}
+img:hover{
+    scale: 1.3;
+    opacity: 0.8    ;
+}
+
+img:active{
+    scale: 1.7;
+    opacity: 1; 
+}
+
+#Button{
+    padding: 0.5em 0.8em;
+    background-color: 	#1033ff;
+    color:  #efcc00;
+    margin: 1.3vw;
+    border: 1px solid #1033ff;
+}
+
+#Button:hover{
+    background-color: hsl(231, 100%, 33%);
+    color: hsl(231, 100%, 33%) ;
+    color: hsl(51, 100%, 37%) ;
+    scale: 1.3;
+}
+
+#Button:active{
+    background: #efcc00;
+    color:  #1033ff;
+    scale: 1.5;
+}
+
+#Button-2{
+    border: 1px solid black;
+
+    background-color: #ff6347;
+    padding: 0.5em 0.8em;
+    margin: 1.3vw;
+    transition: all 0.3s;
+    content: "";
+    width: 65.5px;
+    height: 54.5px;
+    cursor: pointer;
+    background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"%3E%3Cpath d="M170.5 51.6L151.5 80h145l-19-28.4c-1.5-2.2-4-3.6-6.7-3.6H177.1c-2.7 0-5.2 1.3-6.7 3.6zm147-26.6L354.2 80H368h48 8c13.3 0 24 10.7 24 24s-10.7 24-24 24h-8V432c0 44.2-35.8 80-80 80H112c-44.2 0-80-35.8-80-80V128H24c-13.3 0-24-10.7-24-24S10.7 80 24 80h8H80 93.8l36.7-55.1C140.9 9.4 158.4 0 177.1 0h93.7c18.7 0 36.2 9.4 46.6 24.9zM80 128V432c0 17.7 14.3 32 32 32H336c17.7 0 32-14.3 32-32V128H80zm80 64V400c0 8.8-7.2 16-16 16s-16-7.2-16-16V192c0-8.8 7.2-16 16-16s16 7.2 16 16zm80 0V400c0 8.8-7.2 16-16 16s-16-7.2-16-16V192c0-8.8 7.2-16 16-16s16 7.2 16 16zm80 0V400c0 8.8-7.2 16-16 16s-16-7.2-16-16V192c0-8.8 7.2-16 16-16s16 7.2 16 16z"%3E%3C/path%3E%3C/svg%3E');
+    background-repeat: no-repeat;
+    background-size: 2vw;
+    background-position: center;
+}
+
+
+#Button-2:hover{ 
+    background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg xmlns="http://www.w3.org/2000/svg" fill="%23FFFFFF" viewBox="0 0 448 512"%3E%3Cpath d="M135.2 17.7C140.6 6.8 151.7 0 163.8 0H284.2c12.1 0 23.2 6.8 28.6 17.7L320 32h96c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 96 0 81.7 0 64S14.3 32 32 32h96l7.2-14.3zM32 128H416V448c0 35.3-28.7 64-64 64H96c-35.3 0-64-28.7-64-64V128zm96 64c-8.8 0-16 7.2-16 16V432c0 8.8 7.2 16 16 16s16-7.2 16-16V208c0-8.8-7.2-16-16-16zm96 0c-8.8 0-16 7.2-16 16V432c0 8.8 7.2 16 16 16s16-7.2 16-16V208c0-8.8-7.2-16-16-16zm96 0c-8.8 0-16 7.2-16 16V432c0 8.8 7.2 16 16 16s16-7.2 16-16V208c0-8.8-7.2-16-16-16z"%3E%3C/path%3E%3C/svg%3E');
+    scale: 1.3;
+}
+#Button-2:active{
+    scale: 1.5;
+    background-size: 2.3vw;
+    border: 1px solid white;
+
+    background-color: #ff3300;
+}
