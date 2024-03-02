@@ -6,9 +6,11 @@ body{
     background-color: rgb(255, 255, 255);
     width: auto;
     box-sizing: border-box;
+    caret-color:  transparent;
 }
 
 .table{
+    caret-color: transparent;
     display: flex;
     justify-content: center;
     margin: 6vh auto 2vh auto;
@@ -213,7 +215,10 @@ img:active{
     opacity: 1; 
 }
 
+
+
 #Button{
+    font-size: x-large;
     padding: 0.5em 0.8em;
     background-color: 	#1033ff;
     color:  #efcc00;

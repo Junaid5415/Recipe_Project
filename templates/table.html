@@ -1,4 +1,12 @@
 {% extends 'base.html' %}
+{% load static %}
+
+
+{% block link %}
+<link rel="stylesheet" href="{% static 'static/css/table.css' %}">
+<link rel="stylesheet" href="{% static 'static/css/style.css' %}">
+
+{% endblock link %}
 
 {% block data %}
 <div class="table">

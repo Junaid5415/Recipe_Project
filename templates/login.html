@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block link %}
+<link rel="stylesheet" href="{% static 'static/css/style.css' %}">
+{% endblock link %}
+
+{% block data %}
+<div id="Div">
+    <form action="" method="post" enctype="multipart/form-data">
+        
+        {% csrf_token %}
+        
+        <div>
+            <h1>Login User</h1>
+        </div>
+
+        <hr>
+        
+        {% if messages %}
+        
+            {% for message in messages  %} 
+                <div id="message">
+                    <h1 class="{if messages.tags}">{{message}}</h1>
+                </div>
+            {% endfor %}
+            
+        {% endif %}
+
+
+        <div>
+            <input placeholder="Username" type="text" name="user_name" required>
+        </div>
+
+        <div>
+            <input placeholder="Email (Optional)" type="email" name="user_email" >
+        </div>
+
+        <div>
+            <input type="password" placeholder="Password" name="user_pass" required>
+        </div>
+
+        <p>Don't Have An Account > <a href="/user_register"> Register</a></p>
+
+        <button type="submit">Login</button>
+    </form>
+</div>
+{% endblock data %}
