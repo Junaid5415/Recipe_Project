@@ -1,49 +1,46 @@
-{% extends 'base.html' %}
-
-{% load static %}
-
-{% block link %}
-<link rel="stylesheet" href="{% static 'static/css/style.css' %}">
-{% endblock link %}
-
-{% block data %}
+{% extends 'base.html' %} {% load static %} {% block link %}
+<link rel="stylesheet" href="{% static 'static/css/style.css' %}" />
+{% endblock link %} {% block nav %}
+<nav>
+  <ul style="display: flex; justify-content: end">
+    <a href="/user_register/"><button class="task">Register</button></a>
+  </ul>
+</nav>
+{% endblock nav %} {% block data %}
 <div id="Div">
-    <form action="" method="post" enctype="multipart/form-data">
-        
-        {% csrf_token %}
-        
-        <div>
-            <h1>Login User</h1>
-        </div>
+  <form action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
 
-        <hr>
-        
-        {% if messages %}
-        
-            {% for message in messages  %} 
-                <div id="message">
-                    <h1 class="{if messages.tags}">{{message}}</h1>
-                </div>
-            {% endfor %}
-            
-        {% endif %}
+    <div>
+      <h1>Login User</h1>
+    </div>
 
+    <hr />
 
-        <div>
-            <input placeholder="Username" type="text" name="user_name" required>
-        </div>
+    {% if messages %} {% for message in messages %}
+    <div id="message">
+      <h1 id="h1" class="{if messages.tags}">{{message}}</h1>
+      <span id="span">&#10006;</span>
+    </div>
+    {% endfor %} {% endif %}
 
-        <div>
-            <input placeholder="Email (Optional)" type="email" name="user_email" >
-        </div>
+    <div>
+      <input placeholder="Username" type="text" name="user_name" required />
+    </div>
 
-        <div>
-            <input type="password" placeholder="Password" name="user_pass" required>
-        </div>
+    <div>
+      <input placeholder="Email (Optional)" type="email" name="user_email" />
+    </div>
 
-        <p>Don't Have An Account > <a href="/user_register"> Register</a></p>
+    <div>
+      <input type="password" placeholder="Password" name="user_pass" required />
+    </div>
 
-        <button type="submit">Login</button>
-    </form>
+    <p>Don't Have An Account > <a href="/user_register"> Register</a></p>
+
+    <button type="submit">Login</button>
+  </form>
 </div>
-{% endblock data %}
+{% endblock data %} {% block script %}
+<script src="{% static 'static/js/index.js' %}"></script>
+{% endblock script %}

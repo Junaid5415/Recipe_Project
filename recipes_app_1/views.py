@@ -2,11 +2,13 @@ from django.shortcuts import render, redirect, HttpResponse
 from django.contrib.auth.models import User
 from django.contrib import messages
 from .models import *
+from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.decorators import login_required
 
 
 # Create your views here.
 
-
+@login_required(login_url='/user_login/')
 def index(request):
     if request.method == 'POST':
         data = request.POST
@@ -30,7 +32,7 @@ def index(request):
     return render(request, 'index.html', context)  
 
 
-
+@login_required(login_url='/user_login/')
 def table(request):
     titles = 'Table'
     title = {'title': titles}
@@ -38,14 +40,14 @@ def table(request):
     return render(request, 'table.html',  {'queryset' : queryset ,**title})
 
 
-
+@login_required(login_url='/user_login/')
 def delete_recipe(request, id):
     queryset = Recipe.objects.get(id=id)
     queryset.delete()
     return redirect('table')
 
 
-
+@login_required(login_url='/user_login/')
 def edit_recipe(request, id):
     queryset = Recipe.objects.get(id=id)
     name = {'title': f'Edit_Recipe_{id}'}
@@ -67,7 +69,6 @@ def edit_recipe(request, id):
         return redirect('table')
 
     return render(request, 'update.html', {'data': queryset, **name})    
-
 
 
 def user_register(request):
@@ -102,13 +103,34 @@ def user_register(request):
 
 
 def user_login(request):
-    user = User.objects.all()
+
     if request.method == 'POST':
         data = request.POST
+
         username = data.get('user_name')
-        email = data.get('user_email')
+        email = data.get('user_email', None)
+
+        password = data.get('user_pass')
+
+        if not User.objects.filter(username = username).exists():
+            messages.error(request, 'Username Not Found')
+            return redirect('/user_login/')
+
+        user = authenticate(username = username, email = email, password = password)
+
+        if user is None:
+            messages.error(request, 'Invalid Credentials! Please Enter Correct Username And Password ')
+            return redirect('/user_login/')
+
+        else:
+            login(request, user)
+            return redirect('/table/')
+
         
     return render(request, 'login.html')
 
+
+@login_required(login_url='/user_login/')
 def user_logout(request):
-    pass 
+    logout(request)
+    return redirect('/user_login/')

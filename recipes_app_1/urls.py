@@ -8,8 +8,9 @@ urlpatterns = [
      path('table/', views.table, name='table'),
      path('delete_recipe/<id>/', views.delete_recipe, name='delete_recipe'),
      path('edit_recipe/<id>/', views.edit_recipe, name='edit_recipe'),
-     path('user_register/', views.user_register, name='user_register' ),
-     path('user_login/', views.user_login, name='user_login' ),
+     path('user_register/', views.user_register, name='user_register'),
+     path('user_login/', views.user_login, name='user_login'),
+     path('user_logout/', views.user_logout, name='user_logout'),
 ]
 
 

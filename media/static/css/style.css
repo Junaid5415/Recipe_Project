@@ -2,6 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
 
 
+*{
+    padding: 0;
+    margin: 0;
+}
+
 body{
     font-family: 'Archivo Black', sans-serif;
     background-color: rgb(255, 255, 255);
@@ -13,7 +18,7 @@ body{
 #Div{
     background-color: rgb(255, 255, 255);
     width: 50%;
-    margin: 5vh auto 15vh auto;
+    margin: 15vh auto 15vh auto;
     display: flex;
     justify-content: center;
     padding: 2vw;
@@ -161,7 +166,7 @@ p{
 
 a{
     color: black;
-    text-decoration: none;
+    text-decoration:underline;
 }
 
 p a:active{
@@ -174,11 +179,93 @@ p:hover{
 }
 
 
+#message{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: lightskyblue;
+    border-radius: 20px;
+    margin: 20px 10px;
+}
+
 #message h1{
-    padding: 10px;
+    line-break:anywhere;
+    display: inline-block;
+    width: 80%;
+    margin-right: auto;
+    padding: 2px 10px;
     border-radius: 10px;
     font-size: large;
-    background-color: rgba(33, 195, 249, 0.593) ;
+    color: rgb(0, 0, 0);
+}
+
+#message h1:hover{
+    transform: translateX(10px);
+    scale: 1.1;
+}
+
+#message span{
+    font-size: large;
+    cursor: pointer;
+    margin-right: 35px;
+    transition: all 300ms;
+}
+
+#message span:hover{
+    scale: 1.3;
+    padding: 5px;
+    background-color: #b4b4b46b;
+    border-radius: 10px;
+}
+
+nav{
+    background-color: rgba(22, 22, 83, 0.536);
+    padding: 10px;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+}
+
+ul{
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+li{
+    list-style: none;
+    color: white;
+    /* margin-left: 20px; */
+}
+
+ul a{
+    /* background- color: #fff; */
+    width: 9vw;
+    height: 50px;
+    margin-right: 40px;
+}
+ul a button.task{
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    font-size: medium;
+    transition: all 0.3s;
+    align-self: center  ;
+    border: 1px solid black;
+    border-radius: 15px;
+}
+
+ul a button.task:hover{
     background-color: black;
-    color: rgba(255, 255, 255, 0.863);
+}
+
+.task{
+    background-color: transparent;
+    font-size: medium;
+    padding: 1% 2%;
+    margin-right: 20px;
+    border: 1px solid black;
+    border-radius: 15px;
+
 }
