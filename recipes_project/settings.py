@@ -174,8 +174,9 @@ MEDIA_URL = 'public/'
 #       }
 #     ]
 #   }
-# NAME=recipesapp
+
+# NAME=railway
 # USER=root
-# PASS=root
-# HOST=localhost
-# PORT=3306
+# PASS=UkOyzgADKxPPHpKdtFuFdfBFYBpSaqUP
+# HOST=viaduct.proxy.rlwy.net
+# PORT=26774
