@@ -1,5 +1,5 @@
 {
-    "version": 2,
+    "version": 3,
     "builds": [
       {
         "src": "recipe_project/wsgi.py",
@@ -16,7 +16,7 @@
     ],
     "routes": [
       {
-        "src": "/media/(.*)",
+        "src": "/media/(?<file>.*)",
         "dest": "/media/$1"
       },
       {
