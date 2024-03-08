@@ -28,9 +28,9 @@ environ.Env.read_env()
 SECRET_KEY = env('SECRET_KEY') 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.vercel.app', 'now.sh', '127.0.0.1', 'localhost']
 
 
 # Application definition
@@ -174,3 +174,8 @@ MEDIA_URL = 'public/'
 #       }
 #     ]
 #   }
+# NAME=recipesapp
+# USER=root
+# PASS=root
+# HOST=localhost
+# PORT=3306
