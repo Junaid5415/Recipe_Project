@@ -133,8 +133,6 @@ USE_TZ = True
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# #
-
 STATIC_URL = 'media/'
 
 # Manually Added
@@ -147,3 +145,32 @@ STATIC_ROOT = 'StaticFiles/'
 
 MEDIA_ROOT = 'public/'
 MEDIA_URL = 'public/'
+
+
+# {
+#     "version": 3,
+#     "builds": [
+#       {
+#         "src": "recipe_project/wsgi.py",
+#         "use": "@vercel/python",
+#         "config": { "maxLambdaSize": "15mb", "runtime": "python3.11" }
+#       },
+#       {
+#         "src": "build_files.sh",
+#         "use": "@vercel/static-build",
+#         "config": {
+#           "distDir": "StaticFiles"
+#         }
+#       }
+#     ],
+#     "routes": [
+#       {
+#         "src": "/media/(?<file>.*)",
+#         "dest": "/media/$1"
+#       },
+#       {
+#         "src": "/(.*)",
+#         "dest": "recipe_project/wsgi.py"
+#       }
+#     ]
+#   }
