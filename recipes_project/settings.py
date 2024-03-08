@@ -145,7 +145,5 @@ STATICFILES_DIRS = [
 
 STATIC_ROOT = 'StaticFiles/'
 
-
-
 MEDIA_ROOT = 'public/'
 MEDIA_URL = 'public/'

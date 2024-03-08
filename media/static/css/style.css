@@ -234,9 +234,15 @@ ul{
 }
 
 li{
+    font-size: large;
     list-style: none;
-    color: white;
-    /* margin-left: 20px; */
+    color: black;
+    margin-left: 10px;
+    transition: all 300ms;
+}
+
+li:hover{
+    scale: 1.1;
 }
 
 ul a{
